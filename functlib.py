@@ -1,9 +1,19 @@
+def getting_last_letters(anystring, number):
+    last_letters = anystring[-number:]
+    return last_letters
+
+
 def get_last_letters_surname(id_surname):
     last_letters = id_surname[-2:]
     return last_letters
 
 
 def get_last_letter_surname(id_surname):
+    last_letters = id_surname[-1:]
+    return last_letters
+
+
+def get_last_letter_patronymic(id_surname):
     last_letters = id_surname[-1:]
     return last_letters
 
@@ -54,8 +64,8 @@ def get_initials(id_name, id_patronymic):
     return string_to_return
 
 
-def get_introduction(id_surname):
-    if get_last_letter_surname(id_surname) == "у":
-        return "Уважаемый "
-    if get_last_letter_surname(id_surname) != "у":
-        return "Уважаемая "
+def get_introduction(id_patronymic):
+    if getting_last_letters(id_patronymic, 3) == "вич":
+        return "Уважаемый"
+    if getting_last_letters(id_patronymic, 3) == "вна":
+        return "Уважаемая"
