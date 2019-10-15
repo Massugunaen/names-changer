@@ -57,5 +57,5 @@ def get_initials(id_name, id_patronymic):
 def get_introduction(id_surname):
     if get_last_letter_surname(id_surname) == "у":
         return "Уважаемый "
-    else:
+    if get_last_letter_surname(id_surname) != "у":
         return "Уважаемая "

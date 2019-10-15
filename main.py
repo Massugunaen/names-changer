@@ -16,7 +16,8 @@ with open('names.txt', 'r', encoding='utf-8') as source_file:
         respected_names_file.write(str(functlib.get_introduction(functlib.conjugate_surname(surname))
                                        + name
                                        + ' '
-                                       + patronymic))
+                                       + patronymic[:-2]
+                                       + '\n'))
 
 source_file.close()
 conjugated_names_initials_file.close()
