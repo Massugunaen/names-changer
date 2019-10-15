@@ -52,3 +52,10 @@ def get_initials(id_name, id_patronymic):
     patronymic_initial = id_patronymic[:1]
     string_to_return = name_initial.upper() + '.' + patronymic_initial.upper() + '.'
     return string_to_return
+
+
+def get_introduction(id_surname):
+    if get_last_letter_surname(id_surname) == "у":
+        return "Уважаемый "
+    else:
+        return "Уважаемая "
