@@ -3,55 +3,40 @@ def getting_last_letters(anystring, number):
     return last_letters
 
 
-def get_last_letters_surname(id_surname):
-    last_letters = id_surname[-2:]
-    return last_letters
-
-
-def get_last_letter_surname(id_surname):
-    last_letters = id_surname[-1:]
-    return last_letters
-
-
-def get_last_letter_patronymic(id_surname):
-    last_letters = id_surname[-1:]
-    return last_letters
-
-
 def conjugate_surname(id_surname):
     string_to_return = id_surname
     # Males:
-    if get_last_letters_surname(id_surname) == "ов":
+    if getting_last_letters(id_surname, 2) == "ов":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ев":
+    if getting_last_letters(id_surname, 2) == "ев":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ев":
+    if getting_last_letters(id_surname, 2) == "ев":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ун":
+    if getting_last_letters(id_surname, 2) == "ун":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ин":
+    if getting_last_letters(id_surname, 2) == "ин":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ик":
+    if getting_last_letters(id_surname, 2) == "ик":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ич":
+    if getting_last_letters(id_surname, 2) == "ич":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ап":
+    if getting_last_letters(id_surname, 2) == "ап":
         string_to_return = id_surname + 'у'
-    if get_last_letters_surname(id_surname) == "ой":
+    if getting_last_letters(id_surname, 2) == "ой":
         id_surname = id_surname[:-1]
         string_to_return = id_surname + 'му'
-    if get_last_letters_surname(id_surname) == "ий":
+    if getting_last_letters(id_surname, 2) == "ий":
         id_surname = id_surname[:-2]
         string_to_return = id_surname + 'ому'
 
     # Females
-    if get_last_letters_surname(id_surname) == "ва":
+    if getting_last_letters(id_surname, 2) == "ва":
         id_surname = id_surname[:-1]
         string_to_return = id_surname + "ой"
-    if get_last_letters_surname(id_surname) == "ая":
+    if getting_last_letters(id_surname, 2) == "ая":
         id_surname = id_surname[:-2]
         string_to_return = id_surname + "ой"
-    if get_last_letter_surname(id_surname) == "а":
+    if getting_last_letters(id_surname, 1) == "а":
         id_surname = id_surname[:-1]
         string_to_return = id_surname + "ой"
     return string_to_return
