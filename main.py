@@ -6,6 +6,7 @@ respected_names_file = open('respected_names.txt', 'w', encoding='utf-8')
 with open('names.txt', 'r', encoding='utf-8') as source_file:
     for line in source_file:
         ID = line.split(' ')
+        print(ID)
         surname = ID[0]
         name = ID[1]
         patronym = ID[2]
