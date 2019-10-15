@@ -22,5 +22,4 @@ with open('names.txt', 'r', encoding='utf-8') as source_file:
                                    + patronym
                                    + '\n')
 
-source_file.close()
 conjugated_names_initials_file.close()
