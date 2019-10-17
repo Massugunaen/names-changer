@@ -3,6 +3,11 @@ def getting_last_letters(anystring, number):
     return last_letters
 
 
+def filter():
+
+    return None
+
+
 def get_introduction(id_patronymic):
     if getting_last_letters(id_patronymic, 3) == "вич":
         return "Уважаемый"
