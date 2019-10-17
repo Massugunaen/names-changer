@@ -9,18 +9,16 @@ with open('names.txt', 'r', encoding='utf-8') as source_file:
         ID = line.split(' ')
         surname = ID[0]
         name = ID[1]
-        patronym = ID[2].translate({ord(','): None})
-        print(ID[2])
-        conjugated_names_initials_file.write(str(functlib.conjugate_surname(surname, patronym)
+        patronymic = ID[2].translate({ord(','): None})
+        conjugated_names_initials_file.write(str(functlib.conjugate_surname(surname, patronymic)
                                                  + ' '
-                                                 + functlib.get_initials(name, patronym)
+                                                 + functlib.get_initials(name, patronymic)
                                                  + '\n'))
-        respected_names_file.write(str(functlib.get_introduction(patronym))
+        respected_names_file.write(str(functlib.get_introduction(patronymic))
                                    + ' '
                                    + name
                                    + ' '
-                                   + patronym
+                                   + patronymic
                                    + '\n')
 
-source_file.close()
 conjugated_names_initials_file.close()

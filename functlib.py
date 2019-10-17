@@ -4,7 +4,6 @@ def getting_last_letters(anystring, number):
 
 
 def filter():
-
     return None
 
 
@@ -38,6 +37,8 @@ def conjugate_surname(id_surname, id_patronymic):
         if getting_last_letters(id_surname, 2) == "ик":
             string_to_return = id_surname + 'у'
         if getting_last_letters(id_surname, 2) == "ич":
+            string_to_return = id_surname + 'у'
+        if getting_last_letters(id_surname, 2) == "ыч":
             string_to_return = id_surname + 'у'
         if getting_last_letters(id_surname, 2) == "ян":
             string_to_return = id_surname + 'у'
