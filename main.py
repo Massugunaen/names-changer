@@ -7,9 +7,12 @@ with open('names.txt', 'r', encoding='utf-8') as source_file:
     for line in source_file:
         line = line.strip()
         ID = line.split(' ')
+        while '' in ID:
+            ID.remove('')
         surname = ID[0]
         name = ID[1]
         patronymic = ID[2].translate({ord(','): None})
+        print(ID)
         conjugated_names_initials_file.write(str(functlib.conjugate_surname(surname, patronymic)
                                                  + ' '
                                                  + functlib.get_initials(name, patronymic)
