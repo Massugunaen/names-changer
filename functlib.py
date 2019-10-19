@@ -1,9 +1,17 @@
-def filter():
+import rules
+
+
+def remove_spaces(list_of_names):
+    while '' in list_of_names:
+        list_of_names.remove('')
     return None
 
 
-def get_initials(id_name, id_patronymic):
-    name_initial = id_name[:1]
-    patronymic_initial = id_patronymic[:1]
-    string_to_return = name_initial.upper() + '.' + patronymic_initial.upper() + '.'
-    return string_to_return
+def write_surnames_initials(surname, name, patronymic):
+    return str(rules.conjugate_surname(surname, patronymic) +
+               ' ' + rules.get_initials(name, patronymic) + '\n')
+
+
+def write_res(name, patronymic):
+    return str(rules.get_introduction(patronymic) +
+               ' ' + name + ' ' + patronymic + '\n')
