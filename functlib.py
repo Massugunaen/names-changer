@@ -1,9 +1,10 @@
-from petrovich.main import Petrovich
-
-
 def getting_last_letters(anystring, number):
     last_letters = anystring[-number:]
     return last_letters
+
+
+def filter():
+    return None
 
 
 def get_introduction(id_patronymic):
