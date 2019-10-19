@@ -1,5 +1,4 @@
 import functlib
-import rules
 
 conjugated_names_initials_file = open('conjugated_names_initials.txt', 'w', encoding='utf-8')
 respected_names_file = open('respected_names.txt', 'w', encoding='utf-8')
@@ -8,21 +7,15 @@ with open('names.txt', 'r', encoding='utf-8') as source_file:
     for line in source_file:
         line = line.strip()
         ID = line.split(' ')
-        while '' in ID:
-            ID.remove('')
+        functlib.remove_spaces(ID)
         surname = ID[0]
         name = ID[1]
         patronymic = ID[2].translate({ord(','): None})
-        print(ID)
-        conjugated_names_initials_file.write(str(rules.conjugate_surname(surname, patronymic)
-                                                 + ' '
-                                                 + functlib.get_initials(name, patronymic)
-                                                 + '\n'))
-        respected_names_file.write(str(rules.get_introduction(patronymic))
-                                   + ' '
-                                   + name
-                                   + ' '
-                                   + patronymic
-                                   + '\n')
+
+        info_for_first_file = functlib.write_surnames_initials(surname, name, patronymic)
+        conjugated_names_initials_file.write(info_for_first_file)
+
+        info_for_second_file = functlib.write_res(name, patronymic)
+        respected_names_file.write(info_for_second_file)
 
 conjugated_names_initials_file.close()
