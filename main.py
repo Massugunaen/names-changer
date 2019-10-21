@@ -1,9 +1,13 @@
 import functlib
+import sys
+import os
 
 conjugated_names_initials_file = open('conjugated_names_initials.txt', 'w', encoding='utf-8')
 respected_names_file = open('respected_names.txt', 'w', encoding='utf-8')
 
-with open('names.txt', 'r', encoding='utf-8') as source_file:
+required_name_of_file = sys.argv[1]
+
+with open(functlib.get_filename(required_name_of_file), 'r', encoding='utf-8') as source_file:
     for line in source_file:
         line = line.strip()
         ID = line.split(' ')

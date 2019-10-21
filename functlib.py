@@ -15,3 +15,7 @@ def write_surnames_initials(surname, name, patronymic):
 def write_res(name, patronymic):
     return str(rules.get_introduction(patronymic) +
                ' ' + name + ' ' + patronymic + '\n')
+
+
+def get_filename(name):
+    return str(name) + ".txt"

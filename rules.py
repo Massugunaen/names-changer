@@ -3,18 +3,18 @@ def getting_last_letters(anystring, number):
     return last_letters
 
 
-def get_introduction(id_patronymic):
-    if getting_last_letters(id_patronymic, 3) == "вич":
-        return "Уважаемый"
-    if getting_last_letters(id_patronymic, 3) == "вна":
-        return "Уважаемая"
-
-
 def get_gender(id_patronymic):
     if getting_last_letters(id_patronymic, 3) == "вич":
         return "male"
     if getting_last_letters(id_patronymic, 3) == "вна":
         return "female"
+
+
+def get_introduction(id_patronymic):
+    if getting_last_letters(id_patronymic, 3) == "вич":
+        return "Уважаемый"
+    if getting_last_letters(id_patronymic, 3) == "вна":
+        return "Уважаемая"
 
 
 def conjugate_surname(id_surname, id_patronymic):
