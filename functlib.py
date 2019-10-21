@@ -1,6 +1,5 @@
-import rules
 from petrovich.main import Petrovich
-from petrovich.enums import Case, Gender
+from petrovich.enums import Case
 
 
 def remove_spaces(list_of_names):
@@ -23,8 +22,21 @@ def write_surnames_initials(id_surname, id_name, id_patronymic):
                ' ' + get_initials(id_name, id_patronymic) + '\n')
 
 
+def getting_last_letters(any_string, number):
+    last_letters = any_string[-number:]
+    return last_letters
+
+
+def get_introduction(id_patronymic):
+    last_letters = getting_last_letters(id_patronymic, 3)
+    if last_letters == "вич":
+        return "Уважаемый"
+    if last_letters == "вна":
+        return "Уважаемая"
+
+
 def write_res(id_name, id_patronymic):
-    return str(rules.get_introduction(id_patronymic) +
+    return str(get_introduction(id_patronymic) +
                ' ' + id_name + ' ' + id_patronymic + '\n')
 
 
