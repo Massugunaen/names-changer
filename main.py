@@ -7,7 +7,7 @@ respected_names_file = open('respected_names1.txt', 'w', encoding='utf-8')
 
 required_name_of_file = sys.argv[1]
 
-with open(functlib.get_filename(required_name_of_file), 'r', encoding='utf-8') as source_file:
+with open(required_name_of_file + ".txt", 'r', encoding='utf-8') as source_file:
     for line in source_file:
         line = line.strip()
         ID = line.split(' ')

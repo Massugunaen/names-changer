@@ -38,7 +38,3 @@ def get_introduction(id_patronymic):
 def write_res(id_name, id_patronymic):
     return str(str(get_introduction(id_patronymic)) +
                ' ' + id_name + ' ' + id_patronymic + '\n')
-
-
-def get_filename(id_name):
-    return str(id_name) + ".txt"
