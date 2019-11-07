@@ -4,3 +4,4 @@
 ```
 $ python <main.py> <filename> 
 ```
+Write ```<filename>``` without its extension.
