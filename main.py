@@ -2,8 +2,8 @@ import functlib
 import sys
 
 
-conjugated_names_initials_file = open('conjugated_names_initials.txt', 'w', encoding='utf-8')
-respected_names_file = open('respected_names.txt', 'w', encoding='utf-8')
+conjugated_names_initials_file = open('conjugated_names_initials1.txt', 'w', encoding='utf-8')
+respected_names_file = open('respected_names1.txt', 'w', encoding='utf-8')
 
 required_name_of_file = sys.argv[1]
 
