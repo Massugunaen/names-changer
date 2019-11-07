@@ -1,13 +1,14 @@
 import functlib
 import sys
 
+source_database = sys.argv[1]
+surnames_database = sys.argv[2]
+patronymic_database = sys.argv[3]
 
-conjugated_names_initials_file = open('conjugated_names_initials1.txt', 'w', encoding='utf-8')
-respected_names_file = open('respected_names1.txt', 'w', encoding='utf-8')
+conjugated_names_initials_file = open(functlib.add_txt_extension(surnames_database), 'w', encoding='utf-8')
+respected_names_file = open(functlib.add_txt_extension(patronymic_database), 'w', encoding='utf-8')
 
-required_name_of_file = sys.argv[1]
-
-with open(required_name_of_file + ".txt", 'r', encoding='utf-8') as source_file:
+with open(source_database + ".txt", 'r', encoding='utf-8') as source_file:
     for line in source_file:
         line = line.strip()
         ID = line.split(' ')
