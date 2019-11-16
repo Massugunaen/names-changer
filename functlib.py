@@ -2,7 +2,7 @@ from petrovich.main import Petrovich
 from petrovich.enums import Case
 
 
-def remove_spaces(list_of_names):
+def remove_spaces_from_list(list_of_names):
     while '' in list_of_names:
         list_of_names.remove('')
     return None

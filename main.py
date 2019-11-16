@@ -14,7 +14,7 @@ def main():
         for line in source_file:
             line = line.strip()
             ID = line.split(' ')
-            functlib.remove_spaces(ID)
+            functlib.remove_spaces_from_list(ID)
             surname = ID[0]
             name = ID[1]
             patronymic = ID[2].translate({ord(','): None})
