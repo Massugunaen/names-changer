@@ -2,10 +2,11 @@
 ## Run on Linux only(right now)
 ### Syntax
 ```
-$ python <main.py> <filename> 
+$ python <main.py> <source_database> <second_database> <third_database> 
 ```
 Write ```<filename>``` without its extension.
 
-### Structure of database: Surname Name Patronymic
-
-Parameters: source_database[1] surnames_database[2] patronymics_database[3]
+### Structure of source_database:
+In text file: 
+```Surname Name Patronymic,```
+Giving wrong-structured source database will result mistakes in output databases.
