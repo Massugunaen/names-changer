@@ -35,10 +35,18 @@ def get_introduction(id_patronymic):
         return "Уважаемая"
 
 
+def recording_data_to_surnames_database():
+    return None
+
+
+def recording_data_to_patronymic_database():
+    return None
+
+
 def write_res(id_name, id_patronymic):
     return str(str(get_introduction(id_patronymic)) +
                ' ' + id_name + ' ' + id_patronymic + '\n')
 
 
-def get_filename(id_name):
-    return str(id_name) + ".txt"
+def add_txt_extension(id_database):
+    return id_database + ".txt"
