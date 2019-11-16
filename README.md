@@ -4,7 +4,7 @@
 ```
 $ python <main.py> <source_database> <second_database> <third_database> 
 ```
-Write ```<filename>``` without its extension.
+Write ```<variables>``` without its extension.
 
 ### Structure of source_database:
 In text file: 
